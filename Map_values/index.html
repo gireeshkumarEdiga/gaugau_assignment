@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div>
+            P <input id="p" type="number" />
+            Q <input id="q" type="number" />
+            <button apply()>Apply</button>
+            <div id="practical"></div>
+        </div>
+    </center>
+</body>
+</html>
+
+<script>
+    var parent = document.getElementById("practical");
+    function apply() {
+        var p = document.getElementById("p").value;
+        var q = document.getElementById("q").value;
+
+        for(var i=0; i<q; i++){
+            var div = document.createElement("div");
+            div.innerText = i+"00";
+            parent.append(div);
+        }
+
+    }
+</script>

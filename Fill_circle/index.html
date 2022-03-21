@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <div>
+            Top <input id="top" type="number">
+            Left <input id="left" type="number">
+            Square side <input id="ss" type="number">
+            Circle Radius <input id="cr" type="number">
+            <button onclick="apply()">Apply</button>
+        </div>
+        <div id="practical"></div>
+    </center>
+</body>
+</html>
+
+<script>
+
+    function apply() {
+        var top = document.getElementById("top").value;
+        var left = document.getElementById("left").value;
+        var ss = document.getElementById("ss").value;
+        var cr = document.getElementById("cr").value;
+
+        var parent = document.getElementById("practical");
+
+        for(var i=0; i<top; i++){
+            for(var j=0; j<top; j++){
+                var div = document.createElement('div');
+                div.style.borderRadius = cr+"px"
+                parent.append(div);
+            }
+            parent = "\n";
+        }
+    }
+
+</script>
